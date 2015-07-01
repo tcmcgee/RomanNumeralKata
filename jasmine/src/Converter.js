@@ -46,13 +46,15 @@ function numberToRoman(number)
 	for (var i = keys.length - 1; i > -1; i--) 
 	{
 		c = keys[i]
-			while (number >= c) {
+			while (number >= c) 
+			{
 				if (number >= c)
 				{
 					roman = roman + hash[c]
 					number = number - c
 				}
-				else{
+				else
+				{
 					roman = roman + hash[c]
 					number = number - c
 				}

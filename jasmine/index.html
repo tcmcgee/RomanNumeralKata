@@ -31,6 +31,9 @@ $(document).ready(function(){
     $("#number").change(function(){
         $("#roman").val("");
     }); 
+
+    $('body').css("background-image", "url(numerals.jpg)");
+    $('body').css("color", "white");
 });
 </script>
   </head>
@@ -38,7 +41,7 @@ $(document).ready(function(){
 
 
 <form id="myForm">
-<h1> Enter the number or Roman Numeral, then click submit.<br></h1>
+<h1 font-color="white"> Enter the number or Roman Numeral, then click submit.<br></h1>
 <br>
 <br>
 Please Enter a number:
@@ -50,5 +53,8 @@ Please Enter a number:
 
 <button value="Submit" id="submit" onclick="convertNumber()">Submit</button>
 <button value="Clear" id="clear" onclick ="clearFields()">Clear</button>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 </body>
 </html>
