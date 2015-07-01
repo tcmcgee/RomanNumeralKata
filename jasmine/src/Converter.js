@@ -20,20 +20,9 @@ function convertNumber()
     	{
     		return false;
     	}
-
-       
-       
-
         return false;
 
 }
-
-function clearFields()
-{
-	document.getElementById("number").value = ""
-	document.getElementById("roman").value = ""
-}
-
 
 function numberToRoman(number)
 {
@@ -54,7 +43,6 @@ function numberToRoman(number)
 
 	keys = Object.keys(hash)
 	roman = ""
-	last = 0
 	for (var i = keys.length - 1; i > -1; i--) 
 	{
 		c = keys[i]

@@ -17,22 +17,38 @@
 
   <!-- include spec files here... -->
   <script src="spec/ConverterSpec.js"></script>
+  <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#clear").click(function(){
+        $("#roman").val("");
+        $("#number").val("");
+    });
+    $("#roman").change(function(){
+        $("#number").val("");
+    });  
+    $("#number").change(function(){
+        $("#roman").val("");
+    }); 
+});
+</script>
+  </head>
 
 
 
 <form id="myForm">
-<h1> Enter either the number or Roman Numeral, then click submit!<br> MAKE SURE OTHER FIELD IS EMPTY!</h1>
+<h1> Enter the number or Roman Numeral, then click submit.<br></h1>
 <br>
 <br>
 Please Enter a number:
 <input type="text" id="number" value = ""/>
 <br><br>Roman Numerals:<input type="text" id="roman" value="" />
-<label for="roman" id="romanlbl"></label><br>
+<br>
 
 </form>
 
-<button value="Submit" onclick="convertNumber()">Submit</button>
-<button value="Clear" onclick ="clearFields()">Clear</button>
-
+<button value="Submit" id="submit" onclick="convertNumber()">Submit</button>
+<button value="Clear" id="clear" onclick ="clearFields()">Clear</button>
 </body>
 </html>
